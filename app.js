@@ -190,10 +190,10 @@ app.get('/scroller',(req,res) => {
  
 
 
-app.get('/category/:id',(req,res) => {
+app.get('/details/:id',(req,res) => {
     let params = Number(req.params.id);
 
-   db.collection('total').find({"category_id":params}).toArray((err,result) => {
+   db.collection('total').find({"v_id":params}).toArray((err,result) => {
     if(err) throw err;
     res.send(result)
 })
